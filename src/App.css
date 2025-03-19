@@ -1,0 +1,12 @@
+input {
+  width: 100%;
+}
+
+
+.bk-row {
+  margin: 10px 0;
+}
+
+.bk-button {
+  min-width: 80px;
+}
