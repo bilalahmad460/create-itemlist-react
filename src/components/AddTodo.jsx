@@ -1,8 +1,9 @@
 import { useState } from "react";
+import { IoAddCircleSharp } from "react-icons/io5";
 
 function AddTodo({ onNewItem }) {
-  const [todoItem, setTodoItem] = useState();
-  const [todoDate, setTodoDate] = useState();
+  const [todoItem, setTodoItem] = useState("");
+  const [todoDate, setTodoDate] = useState("");
 
   const handleNameChange = (event) => {
     setTodoItem(event.target.value);
@@ -37,7 +38,7 @@ function AddTodo({ onNewItem }) {
             className="btn btn-success bk-button"
             onClick={handleAddButtonClicked}
           >
-            Add
+            <IoAddCircleSharp />
           </button>
         </div>
       </div>

@@ -22,9 +22,11 @@ function App() {
   ];
 
   const [todoItem, setTodoItem] = useState([]);
+  const [localState, setLocalState] = useState("i am software engineer");
   const handleNewItem = (itemName, itemDate) => {
     const newTodoItems = [...todoItem, { name: itemName, dueDate: itemDate }];
     setTodoItem(newTodoItems);
+    setLocalState(itemName);
   };
 
   const handleDeleteItem = (todoItemName) => {
@@ -34,7 +36,7 @@ function App() {
 
   return (
     <center className="todo-container">
-      <AppName />
+      <AppName name="Bilal khan" profess={localState} />
       <AddTodo onNewItem={handleNewItem} />
       {todoItem == 0 && <WelcomeMsg></WelcomeMsg>}
       <TodoItems
